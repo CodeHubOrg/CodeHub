@@ -1,0 +1,47 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+
+@import "base";
+@import "tablet";
+
+body, .container{
+  text-align: center;
+}
+
+.inline-list{
+  float: left; 
+    li{
+  display: inline;
+  float: left;
+  }
+}
+
+.nav-wrapper, .nav-wrapper .inline-list{
+  width: 100%;
+}
+.nav-wrapper .inline-list li{
+  width: 23%; margin-right: 2%;
+}
+
+#header .inner, #footer .inner,
+.profile .container,
+.index .section{
+  width: 39em;
+  max-width: 39em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.profile .section{
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 88%;
+}
+
+h1{
+  background: $header-bg url(../img/codehub.gif) right top no-repeat ;
+}

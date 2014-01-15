@@ -1,0 +1,39 @@
+@import "susy";
+@import "compass/css3/border-radius";
+
+$total-columns: 2;
+$column-width: 10em;
+$gutter-width: 0.5em;
+$grid-padding: $gutter-width;
+
+//alternative layout breakpoints 
+$mob-landsc: 30em 4;
+$tablet: 47em 8;  
+$computer: 55em 12;
+
+
+$default-border-radius: 5px;
+
+$body-bg: #acc2be;
+$about-bg: #5c5a57;
+$orga-bg: #648494;
+$header-bg: #3d454b;
+$fontColor:#ecebe3;
+
+$font-base: 16px;
+$font-base-line-height: 24px;
+
+@function em($target, $context: $font-base){
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}
+
+@function line-height($target, $height: $font-base-line-height){
+  @if $target < $font-base-line-height {
+    @return $font-base-line-height / $target + 0em;
+  }
+  
+  @if $target >=  $font-base-line-height {
+      @return $font-base-line-height * 2 / $target + 0em;
+  }
+}

@@ -1,0 +1,265 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "fonts";
+@import "base";
+
+
+
+/* @group general */
+
+body{
+  font-size: 100%;
+  line-height: 1.5em;
+  font-family: "Trebuchet MS", Helvetica Neue, Arial, sans-serif;
+}
+p{
+  margin-bottom: 0.75em;
+}
+
+a:link,
+a:visited {color:#665956;}
+
+.inner {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.margins-vert{
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.inline-list li{
+  display: inline-block;
+  margin-right: 0.2em 
+} 
+
+.inline-list.skills li{
+  background: #cce2ee;
+  padding: em(2px) 5px;
+  margin:em(2px) 0 em(2px) em(2px);
+  @include border-radius();
+} 
+
+@import "clear";
+
+/* @end general */
+
+
+/* @group layout */
+.inner.heading{
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+} 
+
+#footer{
+  background: $header-bg;
+}
+
+
+/* @end layout */
+
+
+/* @group topography */
+
+
+
+h1{
+  background: $header-bg url(../img/codehub_inv.svg) right top no-repeat ;
+  background-size: 60px;
+  color: $fontColor;
+  height: 1.75em;
+  padding: 0 0.6em;
+  font-size: em(28px);
+  line-height: line-height(28px);
+  font-family: 'Nova Square', Arial, sans-serif;
+  //border-bottom: $body-bg 2px solid;
+  a:link, a:visited{
+    text-decoration: none;
+    color: $fontColor;
+    
+  }
+}
+
+
+h2{
+  color: $fontColor;
+  font-size: em(24px);
+  line-height: em(24px);
+  padding-left: 0.75em;
+}
+
+h3{
+  font-size: em(18px);
+  line-height: line-height(18px);
+  padding-left: 1em;
+  color: $fontColor;
+}
+
+// specific pages
+
+#header h2{
+  background: $header-bg;
+}
+
+.about h2{
+  background: $about-bg;
+}
+
+.organisers h2{
+  background: $orga-bg;
+}
+
+.organisers strong{
+  font-weight: bold;
+  background: $body-bg;
+  color: #555;
+  a{
+    color: $about-bg;
+  }
+}
+
+.profile h3{
+  background: $orga-bg;
+  color: fontColor;
+}
+
+.profile .main-data h3{
+  background: none; 
+  padding-left: 0;
+  font-weight: bold;
+  color: #333;
+}
+/* @end typograpy */
+
+
+/* @group navigation */
+
+.nav{
+  background: $header-bg;
+  overflow: auto;
+  padding-bottom: 0.25em;
+  li{
+  @include span-columns(1,2);
+  @include nth-omega(2n);
+  text-align: center;
+  font-weight: bold;
+  background: $body-bg;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  padding: 0.25em 0;
+  //@include border-radius();
+    a {
+      text-decoration: none;
+      color: #444;
+    }
+    @include at-breakpoint($mob-landsc){
+      @include span-columns(1,4);
+      @include remove-nth-omega(2n);
+      @include nth-omega(4n);
+    }
+  }
+  li.current, li.section-active {
+    background: $fontColor;
+  }
+}
+/* @end group */
+
+
+
+
+
+/* @group elements-media */
+
+
+//.media {margin:1.5em;}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 1em;}
+.media .img img{display:block;}
+.media .imgExt{float:right;}
+.media .imgExt.left{float: left}
+
+/* @end elements-media */
+
+
+/* @group elements-profile-main-data */
+
+
+
+
+/* @end elements-profile-main-data */
+
+
+
+
+/* @group elements-social */
+
+#social-networking {
+  li, a{
+    width: 48px;
+    height: 48px;
+    display: block;
+    float: left;
+    }
+    .twitter{ background-position: -71px -14px; }  
+    .google-plus{ background-position: -198px -12px; }  
+    .linkedin{ background-position: -390px -12px;}
+    .facebook{ background-position: -3px -14px; }
+    .github{ background-position: -12px -142px;}
+}
+   
+#social-networking li{
+    list-style: none;
+    background: url(../img/social-icons.jpg) no-repeat;
+    &:hover{
+      opacity: 0.6
+    }
+}
+
+
+
+/* @end elements-social */
+
+@media (min-width: 39em){
+  @import "tablet";
+}
+
+/*@media (min-width: 60em) {
+  @import "desktop";
+} */
+
+
+
+/*
+$sectionPadding: 2em;
+
+%sectionValues {
+  color: $fontColor;
+  padding: $sectionPadding;
+}
+body{
+  font-size: 16px;
+  font-family: Verdana, san-serif;
+  background: #acc2be;
+  padding: 2em;
+}
+section.about {background:#5c5a57;@extend %sectionValues;}
+section  h2 {font-size: 2.5em; padding:0.5em 0;}
+section.organisers {background:#648494; @extend %sectionValues;}
+header {background:#3d454b;  font-size:1.2em; @extend %sectionValues;}
+h1{
+  font-family: 'Nova Square', Arial, sans-serif;
+  font-size: 5em;
+}
+
+
+p{
+  line-height: 1.5em;
+  margin: 0.75em 0;
+}
+strong {font-weight: 600;color:#d7a75b;} */

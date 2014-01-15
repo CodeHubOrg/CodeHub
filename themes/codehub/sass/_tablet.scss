@@ -1,0 +1,122 @@
+/* @group general */
+body {
+  background: $body-bg;
+  color: $fontColor;
+}
+
+a:link,
+a:visited {color:#d6c9c6;}
+
+.inner{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.margins-vert{
+  margin-bottom:1.5em;
+}
+
+/* @end general */
+
+
+/* @group layout */
+
+.container{
+  background: $orga-bg; 
+}
+.profile .container, #header .inner, #footer .inner{
+  @include container(39em);
+}
+
+
+#header{
+  background: $header-bg;
+  overflow: auto;
+}
+
+#footer{
+  padding-left: 0;
+}
+
+.about{
+  background: $about-bg;
+}
+.organisers{
+  background: $orga-bg; 
+}
+
+
+footer{
+  padding-left: 0;
+}
+
+.main{
+    @include span-columns(5, 12);
+    background: $about-bg;
+   
+}
+
+.sidebar{
+   @include span-columns(7 omega, 12);  
+   background: $orga-bg;
+   padding-top: 90px;
+}
+
+.section{
+  @include container(39em);
+  padding-top:0.75em;
+}
+
+div.about{
+  width: 100%;
+  background: $about-bg;
+}
+
+.profile-wrap{
+  background: $orga-bg;
+}
+
+.skills {
+  color: $about-bg;
+}
+
+/* @end layout */
+
+
+/* @group typography */
+
+
+#header p{
+  font-size: em(18px);
+  line-height: line-height(18px);
+}
+
+h1{
+  background: $header-bg url(../img/codehub_inv.svg) 280px top no-repeat ; 
+  background-size: 100px;
+  font-size: em(48px);
+  padding-left: 0;
+}
+
+h2, h3{
+  font-family: 'Nova Square', Helvetica, sans-serif;
+  padding-left: 0;
+}
+
+h3{
+ font-weight: 400;  
+ font-size: em(21px);
+ line-height: line-height(21px);
+}
+
+.profile h3{
+  background: inherit;
+}
+
+.profile .main-data h3{
+  color: $fontColor;
+}
+
+
+
+/* @end typography */
