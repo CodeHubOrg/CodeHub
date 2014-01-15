@@ -109,14 +109,8 @@
 </div><!-- container -->
 
 <footer id="footer">
-  <div class="inner">Codehub 2013</div>
-</footer>
-  
-  
-  
- 
-  
-  
+  <div class="inner">Codehub 2014</div>
+</footer>  
   <?php Loader::element('footer_required'); ?>
 </body>
 </html>
