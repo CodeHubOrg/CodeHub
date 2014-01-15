@@ -61,7 +61,7 @@
 
 
 <footer id="footer">
-  <div class="inner">Codehub 2013</div>
+  <div class="inner">Codehub 2014</div>
 </footer>
   
   
