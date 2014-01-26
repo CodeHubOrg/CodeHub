@@ -11,6 +11,11 @@
       $a = new GlobalArea('Header nav');
       $a->display();
       ?>
+       <?php $u = new User();
+       if($u->isLoggedIn()){
+        echo '<p><a href="/profile">&lt; Back to your profile</a></p>';
+       }
+      ?>
     </div>
   </header>
  <?php $this->inc('elements/profile_wrapper_top.php'); ?>

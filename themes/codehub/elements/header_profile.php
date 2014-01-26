@@ -25,7 +25,7 @@
       $bt->controller->displaySubPageLevels = '1';
       $bt->controller->displaySystemPages = true;
       $bt->render('view');
-      echo '<p><em>Some content of this page can be edited by clicking on "Edit" in the top left of the page. Don\'t forget to approve the changes!</em></p>';
+      echo '<p><em>Some content on this page can be edited by clicking on "Edit" in the top left of the page. Don\'t forget to approve the changes!</em></p>';
     }
     ?>
     </div>
