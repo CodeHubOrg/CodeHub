@@ -95,6 +95,7 @@ h2{
 }
 
 h3{
+  background: $orga-bg;
   font-size: em(18px);
   line-height: line-height(18px);
   padding-left: 1em;
@@ -126,7 +127,7 @@ h3{
 
 .profile h3{
   background: $orga-bg;
-  color: fontColor;
+  color: $fontColor;
 }
 
 .profile .main-data h3{
@@ -220,10 +221,17 @@ h3{
       opacity: 0.6
     }
 }
-
-
-
 /* @end elements-social */
+
+
+/* @group codehub-pages */
+  li.categories {
+    margin: 0.75em 0;
+   }
+
+/* @end codehub-pages */ 
+
+
 
 @media (min-width: 39em){
   @import "tablet";

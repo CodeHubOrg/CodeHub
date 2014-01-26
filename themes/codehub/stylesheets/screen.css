@@ -81,6 +81,10 @@ a:visited {
   color: #665956;
 }
 
+em{
+  font-style: italic;
+}
+
 .inner {
   width: 88%;
   margin: 0 auto;
@@ -168,6 +172,7 @@ h2 {
 }
 
 h3 {
+  background: #648494;
   font-size: 1.125em;
   line-height: 1.33333em;
   padding-left: 1em;
@@ -197,7 +202,7 @@ h3 {
 
 .profile h3 {
   background: #648494;
-  color: fontColor;
+  color: #ecebe3;
 }
 
 .profile .main-data h3 {
@@ -313,6 +318,12 @@ h3 {
 }
 
 /* @end elements-social */
+/* @group codehub-pages */
+li.categories {
+  margin: 0.75em 0;
+}
+
+/* @end codehub-pages */
 @media (min-width: 39em) {
   /* @group general */
   body {
@@ -415,6 +426,7 @@ h3 {
   }
 
   h3 {
+    background: inherit;
     font-weight: 400;
     font-size: 1.3125em;
     line-height: 1.14286em;
