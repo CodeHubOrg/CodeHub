@@ -47,11 +47,14 @@
 		$av = Loader::helper('concrete/avatar');
 		$u = new User();
 		
-		foreach($users as $user) { 
-		
-			?>				
+		foreach($users as $user) { 		  
+		  if(!$user->getAttribute('notlisted')){		
+      ?>	
 			<div class="ccm-profile-member">
-				<div class="ccm-profile-member-avatar"><a href="<?php echo $this->url('/profile','view', $user->getUserID())?>"><?php echo $av->outputUserAvatar($user)?></a></div>
+				<div class="ccm-profile-member-avatar">
+       
+          
+          <a href="<?php echo $this->url('/profile','view', $user->getUserID())?>"><?php echo $av->outputUserAvatar($user)?></a></div>
 				<div class="ccm-profile-member-detail">
 					<!-- <div class="ccm-profile-member-username"><a href="<?php echo $this->url('/profile','view', $user->getUserID())?>"><?php echo $user->getUserName()?></a></div> -->
 					<div class="ccm-profile-member-fields">
@@ -68,7 +71,10 @@
 		
 		
 	
-	<?php  } ?>
+	<?php 
+      } 
+    } 
+  ?>
 		
 		
 		
