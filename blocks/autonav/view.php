@@ -17,6 +17,10 @@ foreach ($navItems as $ni) {
     //class for parent items of the page currently being viewed
     $classes[] = 'section-active';
   }
+  
+  if($ni->name == 'Github Pages'){
+    $classes[] = 'gitlink';
+  }
 
   //Put all classes together into one space-separated string
   $ni->classes = implode(" ", $classes);

@@ -168,6 +168,20 @@ h3{
   li.current, li.section-active {
     background: $fontColor;
   }
+  
+  li.gitlink, li.codehublink{   
+    a{
+     color: #acc2be;     
+    }    
+  }
+  
+  li.gitlink{
+   background: #4D555B url(../img/octocat.png) no-repeat 5px 5px ;
+  }
+  
+  li.codehublink{
+   background: url("../img/codehub.png") no-repeat scroll 5px 2px #4D555B;
+  }
 }
 /* @end group */
 

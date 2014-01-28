@@ -81,10 +81,6 @@ a:visited {
   color: #665956;
 }
 
-em{
-  font-style: italic;
-}
-
 .inner {
   width: 88%;
   margin: 0 auto;
@@ -256,6 +252,15 @@ h3 {
 }
 .nav li.current, .nav li.section-active {
   background: #ecebe3;
+}
+.nav li.gitlink a, .nav li.codehublink a {
+  color: #acc2be;
+}
+.nav li.gitlink {
+  background: #4d555b url(../img/octocat.png) no-repeat 5px 5px;
+}
+.nav li.codehublink {
+  background: url("../img/codehub.png") no-repeat scroll 5px 2px #4d555b;
 }
 
 /* @end group */
