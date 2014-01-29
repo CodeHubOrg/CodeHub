@@ -18,6 +18,11 @@
 	  <div class="about">
 	      <section class="about section">
 	        <div class="inner margins-vert">
+            
+            <?php 
+                $a = new Area('Profiles intro');
+                $a->display($c);
+            ?>
 	          <form method="get" action="<?php echo DIR_REL?>/<?php echo DISPATCHER_FILENAME?>">
 							<?php  echo t('Search');?>  		
 							<input type="hidden" name="cID" value="<?php echo $c->getCollectionID()?>" />
@@ -59,11 +64,11 @@
 					<!-- <div class="ccm-profile-member-username"><a href="<?php echo $this->url('/profile','view', $user->getUserID())?>"><?php echo $user->getUserName()?></a></div> -->
 					<div class="ccm-profile-member-fields">
 					<?php 
-					foreach($attribs as $ak) { ?>
+					//foreach($attribs as $ak) { ?>
 						<div>
-							<?php echo $user->getAttribute($ak, 'displaySanitized', 'display'); ?>
+							<a href="<?php echo $this->url('/profile','view', $user->getUserID())?>"><?php echo $user->getAttribute('full_name', 'displaySanitized', 'display'); ?></a>
 						</div>
-					<?php  } ?>
+					<?php // } ?>
 					</div>					
 				</div>
 				<div class="ccm-spacer"></div>
