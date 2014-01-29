@@ -1,3 +1,3 @@
 <footer id="footer">
-<div class="inner heading">CodeHub 2014</div>
+<div class="inner">CodeHub 2014</div>
 </footer>
