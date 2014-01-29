@@ -3,14 +3,18 @@
   <header id="header">
     <div class="inner heading">
       <?php 
-      $a = new GlobalArea('Site Logo');
-      $a->display();
-      ?>
-            
+        $a = new GlobalArea('Site Logo');
+        $a->display();
+      ?>   
       <?php 
-      $a = new GlobalArea('Header nav');
-      $a->display();
+        $a = new GlobalArea('Header nav');
+        $a->display();
       ?>
+      <?php 
+        $at = new Area('Profile heading');
+        $at->display($c);
+      ?>
+      
     </div>
   </header>  
  <div class="container cf">
@@ -39,7 +43,7 @@
     <section class="organisers section">
     
       <div class="inner">
-            	<h2><?php  echo t('Profiles');?></h2> 	
+            <!--	<h2><?php  echo t('Profiles');?></h2> -->	
 	
 	<?php  if ($userList->getTotal() == 0) { ?>
 	

@@ -37,10 +37,10 @@
 
   <div class="about">
       <section class="about section">
-        <div class="inner margins-vert">
+        
           <?php $a = new Area('Main');
             $a->display($c); ?>
-        </div>
+       
       </section>
   </div> 
   
@@ -49,11 +49,10 @@
 <div class="container">
     <section class="organisers section">
     
-      <div class="inner">
             <?php $a = new Area('Secondary Content');
             $a->display($c); ?>
  
-       </div><!-- inner -->
+
       
     </section>
 
