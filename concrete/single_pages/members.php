@@ -68,6 +68,7 @@
 				</div>
 				<div class="ccm-spacer"></div>
 			</div>	
+    
 		
 		
 	
@@ -75,7 +76,9 @@
       } 
     } 
   ?>
-		
+		    </div>
+      </div><!-- inner -->      
+    </section>
 		
 		
 		<?php echo $userList->displayPagingV2()?>
@@ -84,9 +87,7 @@
 	
 	} ?>
  
-       </div><!-- inner -->
       
-    </section>
 
 </div><!-- container --> 
   <?php $this->inc('elements/footer_profile.php'); ?>
