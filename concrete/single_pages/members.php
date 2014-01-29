@@ -23,13 +23,13 @@
                 $a = new Area('Profiles intro');
                 $a->display($c);
             ?>
-	          <form method="get" action="<?php echo DIR_REL?>/<?php echo DISPATCHER_FILENAME?>">
+	     <!--     <form method="get" action="<?php echo DIR_REL?>/<?php echo DISPATCHER_FILENAME?>">
 							<?php  echo t('Search');?>  		
 							<input type="hidden" name="cID" value="<?php echo $c->getCollectionID()?>" />
 							<input name="keywords" type="text" value="<?php echo $keywords?>" size="20" />		
 							<input name="submit" type="submit" value="<?php echo t('Search')?>" />
 					  </form>
-	        </div>
+	        </div> -->
 	      </section>
 	  </div> 
 	  
