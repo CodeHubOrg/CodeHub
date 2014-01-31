@@ -28,8 +28,12 @@ foreach ($navItems as $ni) {
 
 
 //*** Step 2 of 2: Output menu HTML ***/
+?>
+<div class="nav-wrapper">
+  <nav class="nav-main" role="navigation">
+    <ul class="nav inline-list">
+<?php
 
-echo '<ul class="nav">'; //opens the top-level menu
 
 foreach ($navItems as $ni) {
 
@@ -44,5 +48,8 @@ foreach ($navItems as $ni) {
     echo str_repeat('</ul></li>', $ni->subDepth); //closes dropdown sub-menu(s) and their top-level nav item(s)
   }
 }
+?>
 
-echo '</ul>'; //closes the top-level menu
+    </ul>
+  </nav>
+</div>

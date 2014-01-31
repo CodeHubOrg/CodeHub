@@ -6,7 +6,7 @@
       <link href="<?php echo $this->getThemePath(); ?>/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
       <!--[if (lt IE 9)&(!IEMobile)]>
-            <link href="/stylesheets/ie.css" rel="stylesheet" type="text/css" />
+            <link href="<?php echo $this->getThemePath(); ?>/stylesheets/ie.css" rel="stylesheet" type="text/css" />
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
       <link rel="shortcut icon" href="favicon.ico" />

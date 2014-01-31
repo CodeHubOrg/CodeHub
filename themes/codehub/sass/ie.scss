@@ -9,9 +9,10 @@
 
 body, .container{
   text-align: center;
+
 }
 
-.inline-list{
+.nav-wrapper .nav.inline-list{
   float: left; 
     li{
   display: inline;
@@ -19,16 +20,16 @@ body, .container{
   }
 }
 
-.nav-wrapper, .nav-wrapper .inline-list{
+.nav-wrapper, .nav-wrapper .nav.inline-list{
   width: 100%;
 }
-.nav-wrapper .inline-list li{
+.nav-wrapper .nav.inline-list li{
   width: 23%; margin-right: 2%;
 }
 
 #header .inner, #footer .inner,
 .profile .container,
-.index .section{
+.index .section, .organisers.section, .ccm-profile-member-list, .ccm-profile-membe{
   width: 39em;
   max-width: 39em;
   margin-left: auto;
