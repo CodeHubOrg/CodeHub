@@ -32,8 +32,8 @@
 							<input type="hidden" name="cID" value="<?php echo $c->getCollectionID()?>" />
 							<input name="keywords" type="text" value="<?php echo $keywords?>" size="20" />		
 							<input name="submit" type="submit" value="<?php echo t('Search')?>" />
-					  </form>
-	        </div> -->
+					  </form> -->	
+          </div> 
 	      </section>
 	  </div> 
 	  
@@ -84,7 +84,7 @@
 	<?php 
       } 
     } 
-  ?>
+  ?>     
 		    </div>
       </div><!-- inner -->      
     </section>
