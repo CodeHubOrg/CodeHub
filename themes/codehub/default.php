@@ -62,12 +62,6 @@
 <footer id="footer">
   <div class="inner">Codehub 2014</div>
 </footer>
-  
-  
-  
- 
-  
-  
   <?php Loader::element('footer_required'); ?>
 </body>
 </html>

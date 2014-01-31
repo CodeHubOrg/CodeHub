@@ -95,12 +95,9 @@
 	<?php  
 	
 	} ?>
- 
-      
-
 </div><!-- container --> 
-  <?php $this->inc('elements/footer_profile.php'); ?>
+<?php $this->inc('elements/footer_profile.php'); ?>
 
 
-	
+  
 
