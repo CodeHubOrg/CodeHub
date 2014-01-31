@@ -55,13 +55,10 @@
 
       
     </section>
-
-</div><!-- container -->
-
-
 <footer id="footer">
   <div class="inner">Codehub 2014</div>
 </footer>
+</div><!-- container -->
   <?php Loader::element('footer_required'); ?>
 </body>
 </html>

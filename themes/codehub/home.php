@@ -105,12 +105,10 @@
              ?>
           </div>
      </section>
-
-</div><!-- container -->
-
-<footer id="footer">
-  <div class="inner">Codehub 2014</div>
-</footer>  
+  <footer id="footer">
+    <div class="inner">Codehub 2014</div>
+  </footer> 
+</div>
   <?php Loader::element('footer_required'); ?>
 </body>
 </html>

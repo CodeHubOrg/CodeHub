@@ -101,5 +101,6 @@
         <?php  } ?>   -->
 
   <?php $this->inc('elements/profile_wrapper_bottom.php'); ?>
-    </div>
   <?php $this->inc('elements/footer_profile.php'); ?>
+    </div>
+  
