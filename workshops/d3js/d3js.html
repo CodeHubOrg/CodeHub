@@ -1,0 +1,158 @@
+<!Doctype html>
+<html>
+  <head>
+  	<meta charset="utf8" />
+  	<link rel="stylesheet" href="graph.css" />
+    <title>d3js example</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+
+<div id="t2">
+   
+    <div id="demo2">
+    </div>
+
+    <script>
+
+function createGraph(el, rows) {
+    
+    var self = this;
+    
+    self.zoom = function() {
+        self.viz.attr(
+            "transform",
+            "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")");
+    }
+
+    $(el).height( 450 );
+    $(el).width( 600 );
+    
+    var w = $(el).innerWidth(),
+        h = $(el).innerHeight();
+    
+    var svg = d3.select(el).append("svg")
+        .attr("width", w)
+        .attr("height", h)
+        .call(d3.behavior.zoom().on("zoom", self.zoom));
+        
+    // add a group to support the zoom function
+    self.viz = svg.append('svg:g');
+    
+    // parameterise the force layout
+    var force = d3.layout.force()
+        .charge(-4000)
+        .linkDistance(function (link) { return 300-(link.interactions/10); })
+        .size([w, h]);
+
+    self.nodes = force.nodes();
+    self.links = force.links();
+    
+    // convert people names to colours
+    self.getColour = function(node) {
+
+        if (node.name == 'CB') {
+            return "#ff7f0e;"
+        } else if (node.name == 'ss') {
+            return '#467612';
+        } else if (node.name == 'AA') {
+            return '#d62728';
+        } else if (node.name == 'HF') {
+            return '#aec7e8';
+        } else if (node.name == 'E') {
+            return '#ffbb78';
+        } else if (node.name == 'DC') {
+            return '#DB4D4D';
+        } else if (node.name == 'T') {
+            return '#DB4D4D';
+        } else if (node.name == 'JC') {
+            return '#DB4D4D';
+        } else {        
+            return '#9467bd';
+        }
+    }
+
+    var people = {};
+
+    // add the nodes and links
+    $.each(rows, function(index, row) {
+    
+        var sender = people[row.sender];
+        if (sender === undefined) {
+            sender = { name: row.sender, id: self.nodes.length };                
+            people[row.sender] = sender;
+            self.nodes.push(sender);
+        }
+
+        var recipient = people[row.recipient];
+        if (recipient === undefined) {
+            recipient = { name: row.recipient, id: self.nodes.length };
+            people[row.recipient] = recipient;
+            self.nodes.push(recipient);
+        }
+    
+        var link = { source: sender, target: recipient, interactions: row.interactions };        
+        self.links.push(link);
+    }); 
+    
+    
+    // Create svg lines for the links
+    var lines = viz
+        .selectAll("line.link")
+        .data(self.links, function(d) { return d.source.id + "-" + d.target.id; });
+
+    lines.enter().append("line")
+        .attr("class", "link");
+
+    // Create svg circles for the nodes
+    var node = viz.selectAll("g.node")
+        .data(self.nodes, function(d) { return d.id;});
+
+    var nodeEnter = node.enter().append("g")
+        .attr("class", "node")
+        .attr("id", function(d) { return 'node-' + d.id; })
+        .call(force.drag);
+    
+    nodeEnter.append("circle")
+        .attr("r", function(d) { return 16; })
+        .style("fill", self.getColour);        
+    
+    // Create a text label
+    nodeEnter.append("text")
+        .attr("class", "node_label")
+        .attr("x", -7)            
+        .attr("y", 0)
+        .attr("dy", ".3em")
+        .attr("fill", "white")
+        .text(function(d) { return d.name; });     
+      
+    // The force animation
+    force.on("tick", function() {
+        lines.attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+        node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    });
+    
+    // Start the force layout
+    force.start();
+}
+
+     d3.csv("/workshops/d3js/data/MPrandomInteraction.csv")
+        .row(function(d) { 
+            return {sender: d.sender, recipient: d.recipient, interactions: +d.interactions}; })
+        .get(function(error, rows) { 
+            createGraph('#demo2', rows);
+        });
+
+    </script>
+</div>
+
+  </body>
+</html>
+
+
