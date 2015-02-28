@@ -54,7 +54,8 @@
     </div><!-- main --> <!-- ccm-profile-body-attributes  -->
 
 
-    <div class="sidebar cf">
+  <div class="sidebar cf">
+
       <section class="about-me section">
         <h3>About me</h3>
         <div class="inner margins-vert">
@@ -62,43 +63,38 @@
             $areaname = 'Main-'.$profile->getUserName();
             $a = new Area($areaname); 
             $a->setAttribute('profile', $profile); 
-            //$a->setBlockWrapperStart('<div class="ccm-profile-body-item">');
-            //$a->setBlockWrapperEnd('</div>');
             $a->display($c); 
           ?>
         </div>
     </section>
+
       <section class="elsewhere section">
         <h3>Elsewhere on the web</h3>
         <div class="inner margins-vert">
           <ul id="social-networking" class="inline-list">
-            <?php if($twitter = $profile->getAttribute('twitter')){ ?>
-            <li class="twitter"><a href="http://twitter.com/<?php echo $twitter; ?>"></a></li>
-            <? } ?>
+            <?php if($profile->getAttribute('twitter')){ ?>
+            <li class="twitter"><a href="http://twitter.com/"></a></li>
+            <?php } ?>
+
             <?php if($linkedin = $profile->getAttribute('linkedin')){ ?>
             <li class="linkedin"><a href="http://www.linkedin.com/<?php echo $linkedin; ?>"></a></li>
-            <? } ?>
+            <?php } ?>
             <?php if($google = $profile->getAttribute('googleplus')){ ?>
             <li class="google-plus"><a href="https://plus.google.com/<?php echo $google; ?>"></a></li>
-            <? } ?>
+            <?php } ?>
             <?php if($github = $profile->getAttribute('github')){ ?>
             <li class="github"><a href="http://github.com/<?php echo $github; ?>"></a></li>
-            <? } ?>
+            <?php } ?>
+
+    
           </ul>
         </div>
       </section>
-    </div><!-- end sidebar -->
+  
+
+  </div><!-- end sidebar -->
     
-      <!-- 
-        <h2><?php echo $profile->getUserName()?></h2>
-        <?php 
-        $uaks = UserAttributeKey::getPublicProfileList();
-        foreach($uaks as $ua) { ?>
-            <div>
-                <label><?php echo tc('AttributeKeyName', $ua->getAttributeKeyName())?></label>
-                <?php echo $profile->getAttribute($ua, 'displaySanitized', 'display'); ?>
-            </div>
-        <?php  } ?>   -->
+    
 
   <?php $this->inc('elements/profile_wrapper_bottom.php'); ?>
   <?php $this->inc('elements/footer_profile.php'); ?>
