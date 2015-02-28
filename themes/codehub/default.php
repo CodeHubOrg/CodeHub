@@ -56,7 +56,7 @@
       
     </section>
 <footer id="footer">
-  <div class="inner">Codehub 2014</div>
+  <div class="inner">Codehub <?php echo date("Y"); ?></div>
 </footer>
 </div><!-- container -->
   <?php Loader::element('footer_required'); ?>
