@@ -1,3 +1,3 @@
 <footer id="footer">
-<div class="inner">CodeHub 2014</div>
+<div class="inner">CodeHub <?php echo date("Y"); ?></div>
 </footer>
