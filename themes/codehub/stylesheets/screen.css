@@ -54,7 +54,7 @@ a img {
   border: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -64,7 +64,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-weight: 400;
   src: local("Nova Square"), local("NovaSquare"), url(http://themes.googleusercontent.com/static/fonts/novasquare/v5/YsNHj2Yx5KzHzIjNe-czdIbN6UDyHWBl620a-IRfuBk.woff) format("woff");
 }
-
 /* @group general */
 body {
   font-size: 100%;
@@ -100,11 +99,13 @@ a:visited {
   background: #cce2ee;
   padding: 0.125em 5px;
   margin: 0.125em 0 0.125em 0.125em;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+
+ul.list li {
+  list-style: disc;
 }
 
 .clear {
@@ -230,6 +231,7 @@ h3 {
 .nav li:nth-child(2n) {
   float: right;
   margin-right: 0;
+  *margin-left: -0.5em;
 }
 .nav li a {
   text-decoration: none;
@@ -257,10 +259,10 @@ h3 {
   color: #acc2be;
 }
 .nav li.gitlink {
-  background: #4d555b url(../img/octocat.png) no-repeat 5px 5px;
+  background: #4D555B url(../img/octocat.png) no-repeat 5px 5px;
 }
 .nav li.codehublink {
-  background: url("../img/codehub.png") no-repeat scroll 5px 2px #4d555b;
+  background: url("../img/codehub.png") no-repeat scroll 5px 2px #4D555B;
 }
 
 /* @end group */
@@ -355,7 +357,24 @@ li.categories {
   .container {
     background: #648494;
   }
+}
+@media (min-width: 39em) and (min-width: 39em) {
+  .profile .container, #header .inner, #footer .inner {
+    *zoom: 1;
+    max-width: 41.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .profile .container:after, #header .inner:after, #footer .inner:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
+@media (min-width: 39em) {
   #header {
     background: #3d454b;
     overflow: auto;
@@ -398,6 +417,24 @@ li.categories {
   .section {
     padding-top: 0.75em;
   }
+}
+@media (min-width: 39em) and (min-width: 39em) {
+  .section {
+    *zoom: 1;
+    max-width: 41.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media (min-width: 39em) {
   div.about {
     width: 100%;
     background: #5c5a57;
@@ -447,36 +484,6 @@ li.categories {
 
   /* @end typography */
 }
-@media (min-width: 39em) and (min-width: 39em) {
-  .profile .container, #header .inner, #footer .inner {
-    max-width: 41.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .profile .container:after, #header .inner:after, #footer .inner:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-@media (min-width: 39em) and (min-width: 39em) {
-  .section {
-    max-width: 41.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .section:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
 /*@media (min-width: 60em) {
   @import "desktop";
 } */

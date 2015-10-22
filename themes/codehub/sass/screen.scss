@@ -45,6 +45,12 @@ a:visited {color:#665956;}
   @include border-radius();
 } 
 
+ul.list {
+  li {
+    list-style: disc;
+  }
+}
+
 @import "clear";
 
 /* @end general */
