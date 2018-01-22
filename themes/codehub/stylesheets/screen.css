@@ -106,6 +106,7 @@ a:visited {
 
 ul.list li {
   list-style: disc;
+  list-style-position: inside;
 }
 
 .clear {
@@ -140,25 +141,24 @@ ul.list li {
   width: 100%;
 }
 
+.codehub-logo {
+  width: 246px;
+  height: 63px;
+  margin: 13px 0 8px 30px;
+}
+
 #footer {
-  background: #3d454b;
+  background: #7d858b;
+}
+#footer .inner {
+  padding: 13px 0;
 }
 
 /* @end layout */
 /* @group topography */
 h1 {
-  background: #3d454b url(../img/codehub_inv.svg) right top no-repeat;
-  background-size: 60px;
-  color: #ecebe3;
-  height: 1.75em;
-  padding: 0 0.6em;
-  font-size: 1.75em;
-  line-height: 1.71429em;
-  font-family: 'Nova Square', Arial, sans-serif;
-}
-h1 a:link, h1 a:visited {
-  text-decoration: none;
-  color: #ecebe3;
+  text-indent: -9999px;
+  height: 0;
 }
 
 h2 {
@@ -177,7 +177,7 @@ h3 {
 }
 
 #header h2 {
-  background: #3d454b;
+  background: #7d858b;
 }
 
 .about h2 {
@@ -212,8 +212,9 @@ h3 {
 /* @end typograpy */
 /* @group navigation */
 .nav {
-  background: #3d454b;
+  background: #7d858b;
   overflow: auto;
+  padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
 .nav li {
@@ -376,7 +377,7 @@ li.categories {
 
 @media (min-width: 39em) {
   #header {
-    background: #3d454b;
+    background: #7d858b;
     overflow: auto;
   }
 
@@ -455,11 +456,10 @@ li.categories {
     line-height: 1.33333em;
   }
 
-  h1 {
-    background: #3d454b url(../img/codehub_inv.svg) 280px top no-repeat;
-    background-size: 100px;
-    font-size: 3em;
-    padding-left: 0;
+  .codehub-logo {
+    width: 328px;
+    height: 85px;
+    margin: 34px 0 21px 0;
   }
 
   h2, h3 {

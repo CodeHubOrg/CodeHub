@@ -91,11 +91,10 @@ div.about{
   line-height: line-height(18px);
 }
 
-h1{
-  background: $header-bg url(../img/codehub_inv.svg) 280px top no-repeat ; 
-  background-size: 100px;
-  font-size: em(48px);
-  padding-left: 0;
+.codehub-logo {
+  width: 328px;
+  height: 85px;
+  margin: 34px 0 21px 0;
 }
 
 h2, h3{
