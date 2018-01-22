@@ -3,7 +3,7 @@
       <link href="<?php echo $this->getThemePath();?>/stylesheets/non_ie.css" rel="stylesheet" type="text/css" />
       <!--<![endif]-->
 
-      <link href="<?php echo $this->getThemePath();?>/stylesheets/screen.css?2018" media="screen, projection" rel="stylesheet" type="text/css" />
+      <link href="<?php echo $this->getThemePath();?>/stylesheets/screen.css?201801222" media="screen, projection" rel="stylesheet" type="text/css" />
 
       <!--[if (lt IE 9)&(!IEMobile)]>
             <link href="<?php echo $this->getThemePath();?>/stylesheets/ie.css" rel="stylesheet" type="text/css" />

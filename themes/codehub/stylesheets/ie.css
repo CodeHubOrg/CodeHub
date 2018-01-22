@@ -5,13 +5,13 @@
  * <![endif]--> */
 /* @group general */
 body {
-  background: #acc2be;
-  color: #ecebe3;
+  background: #fff;
+  color: #222;
 }
 
 a:link,
 a:visited {
-  color: #d6c9c6;
+  color: #e2231a;
 }
 
 .inner {
@@ -26,7 +26,7 @@ a:visited {
 /* @end general */
 /* @group layout */
 .container {
-  background: #648494;
+  background: #fff;
 }
 
 @media (min-width: 39em) {
@@ -46,7 +46,7 @@ a:visited {
 }
 
 #header {
-  background: #7d858b;
+  background: #fff;
   overflow: auto;
 }
 
@@ -55,11 +55,11 @@ a:visited {
 }
 
 .about {
-  background: #5c5a57;
+  background: #fff;
 }
 
 .organisers {
-  background: #648494;
+  background: #fff;
 }
 
 footer {
@@ -71,7 +71,7 @@ footer {
   float: left;
   margin-right: 0.39841%;
   display: inline;
-  background: #5c5a57;
+  background: #fff;
 }
 
 .sidebar {
@@ -80,7 +80,7 @@ footer {
   margin-right: 0;
   *margin-left: -0.5em;
   display: inline;
-  background: #648494;
+  background: #fff;
   padding-top: 90px;
 }
 
@@ -105,22 +105,22 @@ footer {
 
 div.about {
   width: 100%;
-  background: #5c5a57;
+  background: #fff;
 }
 
 .profile-wrap {
-  background: #648494;
+  background: #fff;
 }
 
 .skills {
-  color: #5c5a57;
+  color: #fff;
 }
 
 /* @end layout */
 /* @group typography */
 #header p {
-  font-size: 1.125em;
-  line-height: 1.33333em;
+  font-size: 1.3125em;
+  line-height: 1.14286em;
 }
 
 .codehub-logo {
@@ -130,15 +130,17 @@ div.about {
 }
 
 h2, h3 {
-  font-family: 'Nova Square', Helvetica, sans-serif;
+  font-family: 'acherus_grotesqueregular', serif;
+  font-weight: 700;
   padding-left: 0;
+  color: #444;
 }
 
 h3 {
   background: inherit;
   font-weight: 400;
-  font-size: 1.3125em;
-  line-height: 1.14286em;
+  font-size: 2.125em;
+  line-height: 1.41176em;
 }
 
 .profile h3 {
@@ -146,7 +148,7 @@ h3 {
 }
 
 .profile .main-data h3 {
-  color: #ecebe3;
+  color: #222;
 }
 
 /* @end typography */
@@ -188,5 +190,5 @@ body, .container {
 }
 
 h1 {
-  background: #7d858b url(../img/codehub.gif) right top no-repeat;
+  background: #fff url(../img/codehub.gif) right top no-repeat;
 }

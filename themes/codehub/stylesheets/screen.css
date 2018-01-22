@@ -58,11 +58,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-@font-face {
+/*@font-face {
   font-family: 'Nova Square';
   font-style: normal;
   font-weight: 400;
-  src: local("Nova Square"), local("NovaSquare"), url(http://themes.googleusercontent.com/static/fonts/novasquare/v5/YsNHj2Yx5KzHzIjNe-czdIbN6UDyHWBl620a-IRfuBk.woff) format("woff");
+  src: local('Nova Square'), local('NovaSquare'), url(http://themes.googleusercontent.com/static/fonts/novasquare/v5/YsNHj2Yx5KzHzIjNe-czdIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'novecentoregular';
+    src: url('/themes/codehub/fonts/novecentoslabwide-normal-webfont-webfont.woff2') format('woff2'),
+         url('/themes/codehub/fonts/novecentoslabwide-normal-webfont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}*/
+@font-face {
+  font-family: 'acherus_grotesqueregular';
+  src: url("/themes/codehub/fonts/acherus_grotesque_-_regular-webfont.eot");
+  src: url("/themes/codehub/fonts/acherus_grotesque_-_regular-webfont.eot?#iefix") format("embedded-opentype"), url("/themes/codehub/fonts/acherus_grotesque_-_regular-webfont.woff2") format("woff2"), url("/themes/codehub/fonts/acherus_grotesque_-_regular-webfont.woff") format("woff"), url("/themes/codehub/fonts/acherus_grotesque_-_regular-webfont.ttf") format("truetype"), url("/themes/codehub/fonts/acherus_grotesque_-_regular-webfont.svg#acherus_grotesqueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 /* @group general */
 body {
@@ -143,12 +158,12 @@ ul.list li {
 
 .codehub-logo {
   width: 246px;
-  height: 63px;
+  height: 62px;
   margin: 13px 0 8px 30px;
 }
 
 #footer {
-  background: #7d858b;
+  background: #fff;
 }
 #footer .inner {
   padding: 13px 0;
@@ -162,44 +177,44 @@ h1 {
 }
 
 h2 {
-  color: #ecebe3;
+  color: #222;
   font-size: 1.5em;
   line-height: 1.5em;
   padding-left: 0.75em;
 }
 
 h3 {
-  background: #648494;
+  background: #fff;
   font-size: 1.125em;
   line-height: 1.33333em;
   padding-left: 1em;
-  color: #ecebe3;
+  color: #222;
 }
 
 #header h2 {
-  background: #7d858b;
+  background: #fff;
 }
 
 .about h2 {
-  background: #5c5a57;
+  background: #fff;
 }
 
 .organisers h2 {
-  background: #648494;
+  background: #fff;
 }
 
 .organisers strong {
   font-weight: bold;
-  background: #acc2be;
+  background: #fff;
   color: #555;
 }
 .organisers strong a {
-  color: #5c5a57;
+  color: #fff;
 }
 
 .profile h3 {
-  background: #648494;
-  color: #ecebe3;
+  background: #fff;
+  color: #222;
 }
 
 .profile .main-data h3 {
@@ -212,7 +227,7 @@ h3 {
 /* @end typograpy */
 /* @group navigation */
 .nav {
-  background: #7d858b;
+  background: #fff;
   overflow: auto;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
@@ -224,7 +239,7 @@ h3 {
   display: inline;
   text-align: center;
   font-weight: bold;
-  background: #acc2be;
+  background: #fff;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   padding: 0.25em 0;
@@ -254,7 +269,7 @@ h3 {
   }
 }
 .nav li.current, .nav li.section-active {
-  background: #ecebe3;
+  background: #222;
 }
 .nav li.gitlink a, .nav li.codehublink a {
   color: #acc2be;
@@ -335,13 +350,13 @@ li.categories {
 @media (min-width: 39em) {
   /* @group general */
   body {
-    background: #acc2be;
-    color: #ecebe3;
+    background: #fff;
+    color: #222;
   }
 
   a:link,
   a:visited {
-    color: #d6c9c6;
+    color: #e2231a;
   }
 
   .inner {
@@ -356,7 +371,7 @@ li.categories {
   /* @end general */
   /* @group layout */
   .container {
-    background: #648494;
+    background: #fff;
   }
 }
 @media (min-width: 39em) and (min-width: 39em) {
@@ -377,7 +392,7 @@ li.categories {
 
 @media (min-width: 39em) {
   #header {
-    background: #7d858b;
+    background: #fff;
     overflow: auto;
   }
 
@@ -386,11 +401,11 @@ li.categories {
   }
 
   .about {
-    background: #5c5a57;
+    background: #fff;
   }
 
   .organisers {
-    background: #648494;
+    background: #fff;
   }
 
   footer {
@@ -402,7 +417,7 @@ li.categories {
     float: left;
     margin-right: 0.39841%;
     display: inline;
-    background: #5c5a57;
+    background: #fff;
   }
 
   .sidebar {
@@ -411,7 +426,7 @@ li.categories {
     margin-right: 0;
     *margin-left: -0.5em;
     display: inline;
-    background: #648494;
+    background: #fff;
     padding-top: 90px;
   }
 
@@ -438,22 +453,22 @@ li.categories {
 @media (min-width: 39em) {
   div.about {
     width: 100%;
-    background: #5c5a57;
+    background: #fff;
   }
 
   .profile-wrap {
-    background: #648494;
+    background: #fff;
   }
 
   .skills {
-    color: #5c5a57;
+    color: #fff;
   }
 
   /* @end layout */
   /* @group typography */
   #header p {
-    font-size: 1.125em;
-    line-height: 1.33333em;
+    font-size: 1.3125em;
+    line-height: 1.14286em;
   }
 
   .codehub-logo {
@@ -463,15 +478,17 @@ li.categories {
   }
 
   h2, h3 {
-    font-family: 'Nova Square', Helvetica, sans-serif;
+    font-family: 'acherus_grotesqueregular', serif;
+    font-weight: 700;
     padding-left: 0;
+    color: #444;
   }
 
   h3 {
     background: inherit;
     font-weight: 400;
-    font-size: 1.3125em;
-    line-height: 1.14286em;
+    font-size: 2.125em;
+    line-height: 1.41176em;
   }
 
   .profile h3 {
@@ -479,7 +496,7 @@ li.categories {
   }
 
   .profile .main-data h3 {
-    color: #ecebe3;
+    color: #222;
   }
 
   /* @end typography */
