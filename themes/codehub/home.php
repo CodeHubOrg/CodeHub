@@ -6,7 +6,7 @@
 </head>
 <body class="index">
   <header id="header">
-    <div class="inner heading">
+    <div class="inner heading margins-vert">
     <h1>Codehub</h1>
     <a href="/"><img class="codehub-logo" src="/themes/codehub/img/codehub.svg" onerror="this.src='/themes/codehub/img/codehub.png'" alt="CodeHub logo"></a>
 
@@ -24,7 +24,7 @@ $a->display();
     <!--  end logo + nav -->
 
 
-    <div class="inner margins-vert">
+    <div class="inner">
 
 <?php
 $at = new Area('Intro');
