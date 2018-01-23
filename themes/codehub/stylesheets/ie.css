@@ -7,11 +7,7 @@
 body {
   background: #fff;
   color: #222;
-}
-
-a:link,
-a:visited {
-  color: #e2231a;
+  font-size: 1.31em;
 }
 
 .inner {
@@ -119,8 +115,8 @@ div.about {
 /* @end layout */
 /* @group typography */
 #header p {
-  font-size: 1.3125em;
-  line-height: 1.14286em;
+  font-size: 1.125em;
+  line-height: 1.71429em;
 }
 
 .codehub-logo {
@@ -130,17 +126,21 @@ div.about {
 }
 
 h2, h3 {
-  font-family: 'acherus_grotesqueregular', serif;
   font-weight: 700;
   padding-left: 0;
   color: #444;
 }
 
+h2 {
+  font-size: 1.75em;
+  line-height: 1.71429em;
+}
+
 h3 {
   background: inherit;
   font-weight: 400;
-  font-size: 2.125em;
-  line-height: 1.41176em;
+  font-size: 1.3125em;
+  line-height: 1.14286em;
 }
 
 .profile h3 {

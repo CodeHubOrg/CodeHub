@@ -2,10 +2,9 @@
 body {
   background: $body-bg;
   color: $fontColor;
+  font-size: 1.31em;
 }
 
-a:link,
-a:visited {color:#e2231a;}
 
 .inner{
   margin-right: 0;
@@ -87,8 +86,8 @@ div.about{
 
 
 #header p{
-  font-size: em(21px);
-  line-height: line-height(21px);
+  font-size: em(18px);
+  line-height: line-height(28px);
 }
 
 .codehub-logo {
@@ -97,18 +96,22 @@ div.about{
   margin: 34px 0 21px 0;
 }
 
-h2, h3{
-  font-family: 'acherus_grotesqueregular', serif;
+h2, h3{  
   font-weight: 700;
   padding-left: 0;
   color: #444;
 }
 
+h2 {
+  font-size: em(28px);
+  line-height: line-height(28px);
+}
+
 h3{
  background: inherit;
  font-weight: 400;  
- font-size: em(34px);
- line-height: line-height(34px);
+ font-size: em(21px);
+ line-height: line-height(21px);
 }
 
 .profile h3{

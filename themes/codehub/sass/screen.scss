@@ -20,8 +20,9 @@ p{
   margin-bottom: 0.75em;
 }
 
+
 a:link,
-a:visited {color:#665956;}
+a:visited {color:#e2231a;}
 
 .inner {
   width: 88%;
@@ -92,9 +93,10 @@ h1{
 
 
 h2{
+  font-family: 'acherus_grotesqueregular', serif;
   color: $fontColor;
-  font-size: em(24px);
-  line-height: em(24px);
+  font-size: em(21px);
+  line-height: line-height(21px);
   padding-left: 0.75em;
 }
 
@@ -155,7 +157,7 @@ h3{
   @include nth-omega(2n);
   text-align: center;
   font-weight: bold;
-  background: $body-bg;
+  background: #eedfdf;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   padding: 0.25em 0;
@@ -171,7 +173,7 @@ h3{
     }
   }
   li.current, li.section-active {
-    background: $fontColor;
+    background: #dedede;
   }
   
   li.gitlink, li.codehublink{   

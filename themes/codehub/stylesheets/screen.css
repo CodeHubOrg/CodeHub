@@ -92,7 +92,7 @@ p {
 
 a:link,
 a:visited {
-  color: #665956;
+  color: #e2231a;
 }
 
 .inner {
@@ -177,9 +177,10 @@ h1 {
 }
 
 h2 {
+  font-family: 'acherus_grotesqueregular', serif;
   color: #222;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1.3125em;
+  line-height: 1.14286em;
   padding-left: 0.75em;
 }
 
@@ -239,7 +240,7 @@ h3 {
   display: inline;
   text-align: center;
   font-weight: bold;
-  background: #fff;
+  background: #eedfdf;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   padding: 0.25em 0;
@@ -269,7 +270,7 @@ h3 {
   }
 }
 .nav li.current, .nav li.section-active {
-  background: #222;
+  background: #dedede;
 }
 .nav li.gitlink a, .nav li.codehublink a {
   color: #acc2be;
@@ -352,11 +353,7 @@ li.categories {
   body {
     background: #fff;
     color: #222;
-  }
-
-  a:link,
-  a:visited {
-    color: #e2231a;
+    font-size: 1.31em;
   }
 
   .inner {
@@ -467,8 +464,8 @@ li.categories {
   /* @end layout */
   /* @group typography */
   #header p {
-    font-size: 1.3125em;
-    line-height: 1.14286em;
+    font-size: 1.125em;
+    line-height: 1.71429em;
   }
 
   .codehub-logo {
@@ -478,17 +475,21 @@ li.categories {
   }
 
   h2, h3 {
-    font-family: 'acherus_grotesqueregular', serif;
     font-weight: 700;
     padding-left: 0;
     color: #444;
   }
 
+  h2 {
+    font-size: 1.75em;
+    line-height: 1.71429em;
+  }
+
   h3 {
     background: inherit;
     font-weight: 400;
-    font-size: 2.125em;
-    line-height: 1.41176em;
+    font-size: 1.3125em;
+    line-height: 1.14286em;
   }
 
   .profile h3 {
